@@ -59,21 +59,26 @@ Without further ado...
 
 > When in overtype mode, uses overtype behavior when pasting text.
 
-### Abbreviated indicators (or none)
+### Adjusted indicators in status bar (abbreviated, localized or none)
 
-Horizontal screen space at a premium? Have too many things in your status bar already? Turned your monitor sideways because somebody told you it would increase your productivity by at least 23%? Don't worry, we've got just the setting for you!
-
-```json
-"overtype.abbreviatedStatus": true
-```
-
-> Shows an abbreviated overtype status (`INS`/`OVR`) in the status bar.
+Horizontal screen space at a premium? Have too many things in your status bar already?
+Turned your monitor sideways because somebody told you it would increase your productivity by at least 23%?
+Or simply want to match the language to the general UI?
+Don't worry, we've got just the setting for you!
 
 ```json
-"overtype.showInStatusBar": false
+"overtype.labelInsertMode": "",
+"overtype.labelOvertypeMode": "Ovr"
 ```
 
-> Disable showing the overtype status in the status bar.
+> Shows an abbreviated overtype status (`Ovr`) in the status bar if active, and nothing for the "normal" insert mode.
+
+```json
+"overtype.labelInsertMode": "",
+"overtype.labelOvertypeMode": ""
+```
+
+> Disable showing the overtype status in the status bar completely.
 
 ### Overtype cursor style
 
