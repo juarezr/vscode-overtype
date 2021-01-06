@@ -23,7 +23,8 @@ Adds an overtype mode to Visual Studio Code, plus a couple of bells and whistles
 
 The aptly named **overtype mode** allows one to type over and replace existing characters in one's text editor. The most common scenario for overtype mode is when it's activated by accident by an unsuspecting user who can't figure out why the computer is eating all the words they already typed.
 
-To toggle overtype mode, press the `Insert` key. If you don't have an `Insert` key, you can press `Ctrl+Shift+I` (on Windows and Linux) or `Cmd+Shift+I` (on Mac). If you don't care for either of those keybindings, you can customize them in your Keyboard Shortcuts preferences&mdash;just set your own binding for the `overtype.toggle` command.
+To toggle overtype mode, press the `Insert` key. If you don't have an `Insert` key, you can press `Ctrl+Shift+I` (on Windows and Linux) or `Cmd+Shift+I` (on Mac). If you don't care for either of those keybindings, you can customize them in your Keyboard Shortcuts preferences&mdash;just set your own binding for the `overtype.toggle` command.  
+As an alternative you can also click on the Insert/Overtype label to toggle overtype mode.
 
 ![Basic demo](images/demo-basic.gif)
 
