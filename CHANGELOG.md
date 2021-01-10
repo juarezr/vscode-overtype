@@ -2,7 +2,7 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
-## TO BE ANNOUNCED
+## 0.4.0
 
 - Replaced configuration `overtype.abbreviatedStatus` by freely adjustable texts `overtype.labelInsertMode` and `overtype.labelOvertypeMode` [#9](https://github.com/DrMerfy/vscode-overtype/issues/9),
   which allows free abbreviation, localization and also allows hiding the current state in the status bar [#4](https://github.com/DrMerfy/vscode-overtype/issues/4).

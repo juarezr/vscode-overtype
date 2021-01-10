@@ -1,19 +1,16 @@
 # Overtype for Visual Studio Code
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
+<!-- ALL-CONTRIBUTORS-BADGE:END --> 
 [![Open VSX Registry](https://img.shields.io/open-vsx/v/drmerfy/overtype)](https://open-vsx.org/extension/DrMerfy/overtype)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/DrMerfy.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=DrMerfy.overtype)
 [![GitHub release](https://img.shields.io/github/release/DrMerfy/vscode-overtype/all.svg)](https://github.com/DrMerfy/vscode-overtype/releases)
 [![GitHub issues](https://img.shields.io/github/issues/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/pulls)
-![README badges](https://img.shields.io/badge/readme_badges-5-green.svg)
 
 Because some people actually press the Insert key on purpose.
 
 ## This is the continuation fork of the project :) 
-## Original author: [Adam Maras](https://github.com/AdamMaras)
 
 ## Features
 
@@ -121,7 +118,7 @@ There's a [`LICENSE`](https://github.com/DrMerfy/vscode-overtype/blob/master/LIC
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -136,5 +133,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+### Original author: [Adam Maras](https://github.com/AdamMaras)
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
