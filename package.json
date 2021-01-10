@@ -1,6 +1,6 @@
 {
     "name": "overtype",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "displayName": "Overtype",
     "description": "Provides insert/overtype mode.",
     "publisher": "DrMerfy",
@@ -36,11 +36,6 @@
             "type": "object",
             "title": "Overtype configuration",
             "properties": {
-                "overtype.abbreviatedStatus": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Shows an abbreviated overtype status (INS/OVR) in the status bar."
-                },
                 "overtype.paste": {
                     "type": "boolean",
                     "default": false,
@@ -56,10 +51,15 @@
                     "default": "block",
                     "description": "Sets the overtype cursor style."
                 },
-                "overtype.showInStatusBar": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Shows the current overtype mode in the status bar."
+                "overtype.labelInsertMode": {
+                    "type": "string",
+                    "default": "Insert",
+                    "description": "Label text in the status bar shown during Insert Mode, may be empty to hide the status."
+                },
+                "overtype.labelOvertypeMode": {
+                    "type": "string",
+                    "default": "Overtype",
+                    "description": "Label text in the status bar shown during Overtype Mode, may be empty."
                 }
             }
         },

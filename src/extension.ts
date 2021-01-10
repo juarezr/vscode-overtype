@@ -59,16 +59,26 @@ function toggleCommand() {
     activeTextEditorChanged(textEditor);
 }
 
+function getShowInStatusBar(): boolean {
+    if (configuration.labelInsertMode === ""
+     && configuration.labelOvertypeMode === "") {
+        return true;
+     }
+     return false;
+}
+
 function onDidChangeConfiguration() {
     const previousPerEditor = configuration.perEditor;
-    const previousShowInStatusBar = configuration.showInStatusBar;
+    const previousShowInStatusBar = getShowInStatusBar();
 
     const updated = reloadConfiguration();
     if (!updated) { return; }
 
+    const showInStatusBar = getShowInStatusBar();
+
     // post create / destroy when changed
-    if (configuration.showInStatusBar !== previousShowInStatusBar) {
-        if (configuration.showInStatusBar) {
+    if (showInStatusBar !== previousShowInStatusBar) {
+        if (showInStatusBar) {
             createStatusBarItem();
         } else {
             destroyStatusBarItem();

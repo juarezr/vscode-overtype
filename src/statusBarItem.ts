@@ -31,15 +31,26 @@ export function updateStatusBarItem(overtype: boolean | null) {
         statusBarItem.tooltip = "";
 
         statusBarItem.hide();
-    } else if (overtype) {
-        statusBarItem.text = configuration.abbreviatedStatus ? "OVR" : "Overtype";
-        statusBarItem.tooltip = "Overtype Mode";
-
-        statusBarItem.show();
-    } else {
-        statusBarItem.text = configuration.abbreviatedStatus ? "INS" : "Insert";
-        statusBarItem.tooltip = "Insert Mode";
-
-        statusBarItem.show();
+        return;
     }
+    
+    let sbiText;
+
+    if (overtype) {
+        sbiText = configuration.labelOvertypeMode;
+        statusBarItem.tooltip = "Overtype Mode, click to change to Insert Mode";
+    } else {
+        sbiText = configuration.labelInsertMode;
+        statusBarItem.tooltip = "Insert Mode, click to change to Overtype Mode";
+    }
+    if (sbiText === undefined || sbiText == null) sbiText = "";
+
+    // preparation for https://github.com/DrMerfy/vscode-overtype/issues/2
+    // if (configuration.showCapsLockState && capsLockOn) {
+    //     statusBarItem.text = sbiText.toUpperCase();
+    // } else {
+        statusBarItem.text = sbiText.toString();
+    // }
+
+    statusBarItem.show();
 }

@@ -19,10 +19,11 @@ function loadConfiguration() {
     const editorConfiguration = vscode.workspace.getConfiguration("editor");
 
     return {
-        abbreviatedStatus: overtypeConfiguration.get<boolean>("abbreviatedStatus"),
-        showInStatusBar: overtypeConfiguration.get<boolean>("showInStatusBar"),
         paste: overtypeConfiguration.get<boolean>("paste"),
         perEditor: overtypeConfiguration.get<boolean>("perEditor") ? true : false,
+
+        labelInsertMode: overtypeConfiguration.get<String>("labelInsertMode"),
+        labelOvertypeMode: overtypeConfiguration.get<String>("labelOvertypeMode"),
 
         // tslint:disable-next-line:object-literal-sort-keys
         defaultCursorStyle: (() => {
@@ -42,8 +43,8 @@ export function reloadConfiguration() {
     const newConfiguration = loadConfiguration();
 
     // bail out if nothing changed
-    if (configuration.showInStatusBar === newConfiguration.showInStatusBar &&
-        configuration.abbreviatedStatus === newConfiguration.abbreviatedStatus &&
+    if (configuration.labelInsertMode === newConfiguration.labelInsertMode &&
+        configuration.labelOvertypeMode === newConfiguration.labelOvertypeMode &&
         configuration.paste === newConfiguration.paste &&
         configuration.perEditor === newConfiguration.perEditor &&
         configuration.defaultCursorStyle === newConfiguration.defaultCursorStyle &&
@@ -51,8 +52,8 @@ export function reloadConfiguration() {
         return false;
     }
 
-    configuration.showInStatusBar = newConfiguration.showInStatusBar;
-    configuration.abbreviatedStatus = newConfiguration.abbreviatedStatus;
+    configuration.labelInsertMode = newConfiguration.labelInsertMode;
+    configuration.labelOvertypeMode = newConfiguration.labelOvertypeMode;
     configuration.paste = newConfiguration.paste;
     configuration.perEditor = newConfiguration.perEditor;
     configuration.defaultCursorStyle = newConfiguration.defaultCursorStyle;
