@@ -125,7 +125,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/GitMensch"><img src="https://avatars3.githubusercontent.com/u/6699539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simon Sobisch</b></sub></a><br /><a href="#projectManagement-GitMensch" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/GitMensch"><img src="https://avatars3.githubusercontent.com/u/6699539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simon Sobisch</b></sub></a><br /><a href="#projectManagement-GitMensch" title="Project Management">📆</a> <a href="https://github.com/DrMerfy/vscode-overtype/commits?author=GitMensch" title="Code">💻</a></td>
   </tr>
 </table>
 
