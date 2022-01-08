@@ -14,9 +14,19 @@ function stringToCursorStyle(config: vscode.WorkspaceConfiguration, style: strin
     }
 }
 
+function getActiveConfiguration(section: string): vscode.WorkspaceConfiguration {
+    const activeLanguageId = vscode.window.activeTextEditor?.document.languageId;
+    if (activeLanguageId)
+    {
+        const languageScope = {languageId: activeLanguageId};
+        const languageSpecificConfiguration = vscode.workspace.getConfiguration(section, languageScope);
+        return languageSpecificConfiguration;
+    }
+    return vscode.workspace.getConfiguration(section);
+}
+
 function loadConfiguration() {
     const overtypeConfiguration = vscode.workspace.getConfiguration("overtype");
-    const editorConfiguration = vscode.workspace.getConfiguration("editor");
 
     return {
         paste: overtypeConfiguration.get<boolean>("paste"),
@@ -26,15 +36,16 @@ function loadConfiguration() {
         labelOvertypeMode: overtypeConfiguration.get<String>("labelOvertypeMode"),
 
         // tslint:disable-next-line:object-literal-sort-keys
-        defaultCursorStyle: (() => {
+        get defaultCursorStyle(): vscode.TextEditorCursorStyle {
+            const editorConfiguration = getActiveConfiguration("editor");
             return stringToCursorStyle(editorConfiguration, "cursorStyle",
-            vscode.TextEditorCursorStyle.Block);
-        })(),
+                vscode.TextEditorCursorStyle.Block);
+        },
 
         // Get the user defined cursor style for overtype mode
         secondaryCursorStyle: (() => {
             return stringToCursorStyle(overtypeConfiguration, "secondaryCursorStyle",
-             vscode.TextEditorCursorStyle.Line);
+                vscode.TextEditorCursorStyle.Line);
         })(),
     };
 }
@@ -56,7 +67,6 @@ export function reloadConfiguration() {
     configuration.labelOvertypeMode = newConfiguration.labelOvertypeMode;
     configuration.paste = newConfiguration.paste;
     configuration.perEditor = newConfiguration.perEditor;
-    configuration.defaultCursorStyle = newConfiguration.defaultCursorStyle;
     configuration.secondaryCursorStyle = newConfiguration.secondaryCursorStyle;
 
     return true;
