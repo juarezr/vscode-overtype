@@ -32,6 +32,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "DrMerfy",
+      "name": "George Melissourgos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21154979?v=4",
+      "profile": "https://github.com/DrMerfy",
+      "contributions": [
+        "projectManagement",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
