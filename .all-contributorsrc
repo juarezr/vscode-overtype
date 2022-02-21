@@ -23,6 +23,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "MrSimbax",
+      "name": "Mateusz Przybył",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2318282?v=4",
+      "profile": "https://przybyl.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
