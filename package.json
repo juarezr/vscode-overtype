@@ -1,6 +1,6 @@
 {
     "name": "overtype",
-    "version": "0.4.5",
+    "version": "0.4.6",
     "displayName": "Overtype",
     "description": "Provides insert/overtype mode.",
     "publisher": "DrMerfy",
@@ -26,7 +26,7 @@
     },
     "main": "./out/extension",
     "engines": {
-        "vscode": "^1.34.0"
+        "vscode": "^1.63.1"
     },
     "activationEvents": [
         "*"
@@ -88,8 +88,8 @@
         "compile": "tsc -watch -p ./"
     },
     "devDependencies": {
-        "@types/vscode": "^1.63.1",
-        "tslint": "^6.1.3",
-        "typescript": "^4.5.4"
+        "@types/vscode": "1.63.1",
+        "tslint": "6.1.3",
+        "typescript": "4.5.4"
     }
 }
