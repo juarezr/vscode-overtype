@@ -1,20 +1,18 @@
 import * as vscode from "vscode";
 
-export const configuration = loadConfiguration();
-
-function stringToCursorStyle(config: vscode.WorkspaceConfiguration, style: string, def: vscode.TextEditorCursorStyle) {
+const stringToCursorStyle = (config: vscode.WorkspaceConfiguration, style: string, def: vscode.TextEditorCursorStyle) => {
     switch (config.get<string>(style)) {
-        case "line": return vscode.TextEditorCursorStyle.Line;
-        case "line-thin": return vscode.TextEditorCursorStyle.LineThin;
-        case "block": return vscode.TextEditorCursorStyle.Block;
-        case "block-outline": return vscode.TextEditorCursorStyle.BlockOutline;
-        case "underline": return vscode.TextEditorCursorStyle.Underline;
-        case "underline-thin": return vscode.TextEditorCursorStyle.UnderlineThin;
-        default: return def;
+    case "line": return vscode.TextEditorCursorStyle.Line;
+    case "line-thin": return vscode.TextEditorCursorStyle.LineThin;
+    case "block": return vscode.TextEditorCursorStyle.Block;
+    case "block-outline": return vscode.TextEditorCursorStyle.BlockOutline;
+    case "underline": return vscode.TextEditorCursorStyle.Underline;
+    case "underline-thin": return vscode.TextEditorCursorStyle.UnderlineThin;
+    default: return def;
     }
 }
 
-function getActiveConfiguration(section: string): vscode.WorkspaceConfiguration {
+const getActiveConfiguration = (section: string): vscode.WorkspaceConfiguration => {
     const activeLanguageId = vscode.window.activeTextEditor?.document.languageId;
     if (activeLanguageId)
     {
@@ -25,15 +23,15 @@ function getActiveConfiguration(section: string): vscode.WorkspaceConfiguration 
     return vscode.workspace.getConfiguration(section);
 }
 
-function loadConfiguration() {
+const loadConfiguration = () => {
     const overtypeConfiguration = vscode.workspace.getConfiguration("overtype");
 
     return {
         paste: overtypeConfiguration.get<boolean>("paste"),
         perEditor: overtypeConfiguration.get<boolean>("perEditor") ? true : false,
 
-        labelInsertMode: overtypeConfiguration.get<String>("labelInsertMode"),
-        labelOvertypeMode: overtypeConfiguration.get<String>("labelOvertypeMode"),
+        labelInsertMode: overtypeConfiguration.get<string>("labelInsertMode"),
+        labelOvertypeMode: overtypeConfiguration.get<string>("labelOvertypeMode"),
 
         // tslint:disable-next-line:object-literal-sort-keys
         get defaultCursorStyle(): vscode.TextEditorCursorStyle {
@@ -50,7 +48,9 @@ function loadConfiguration() {
     };
 }
 
-export function reloadConfiguration() {
+export const configuration = loadConfiguration();
+
+export const reloadConfiguration = () => {
     const newConfiguration = loadConfiguration();
 
     // bail out if nothing changed

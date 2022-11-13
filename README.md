@@ -107,6 +107,8 @@ How can you contribute?
 - [**Open an issue**](https://github.com/DrMerfy/vscode-overtype/issues) if you found a problem.
 - [**Make a pull request**](https://github.com/DrMerfy/vscode-overtype/pulls) if you fixed a problem!
 
+> Make sure to run `npm run lint` before pushing
+
 ## Release notes
 
 There's a [`CHANGELOG.md`](https://github.com/DrMerfy/vscode-overtype/blob/master/CHANGELOG.md) file.

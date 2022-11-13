@@ -4,7 +4,7 @@ import { configuration } from "./configuration";
 
 let statusBarItem: vscode.StatusBarItem | null;
 
-export function createStatusBarItem() {
+export const createStatusBarItem = () => {
     if (statusBarItem != null) { return statusBarItem; }
 
     statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right);
@@ -16,14 +16,14 @@ export function createStatusBarItem() {
     return statusBarItem;
 }
 
-export function destroyStatusBarItem() {
+export const destroyStatusBarItem = () => {
     if (statusBarItem == null) { return; }
 
     statusBarItem.hide();
     statusBarItem = null;
 }
 
-export function updateStatusBarItem(overtype: boolean | null) {
+export const updateStatusBarItem = (overtype: boolean | null) => {
     if (statusBarItem == null) { return; }
 
     if (overtype === null) {
@@ -33,7 +33,7 @@ export function updateStatusBarItem(overtype: boolean | null) {
         statusBarItem.hide();
         return;
     }
-    
+
     let sbiText;
 
     if (overtype) {
@@ -49,7 +49,7 @@ export function updateStatusBarItem(overtype: boolean | null) {
     // if (configuration.showCapsLockState && capsLockOn) {
     //     statusBarItem.text = sbiText.toUpperCase();
     // } else {
-        statusBarItem.text = sbiText.toString();
+    statusBarItem.text = sbiText.toString();
     // }
 
     statusBarItem.show();

@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-export function overtypeBeforeType(editor: vscode.TextEditor, text: string) {
+export const overtypeBeforeType = (editor: vscode.TextEditor, text: string) => {
     // skip overtype behavior when enter is pressed
     if (text === "\r" || text === "\n" || text === "\r\n") {
         return;
@@ -21,7 +21,7 @@ export function overtypeBeforeType(editor: vscode.TextEditor, text: string) {
     });
 }
 
-export function overtypeBeforePaste(editor: vscode.TextEditor, text: string, pasteOnNewLine: boolean) {
+export const overtypeBeforePaste = (editor: vscode.TextEditor, text: string, pasteOnNewLine: boolean) => {
     editor.selections = editor.selections.map((selection) => {
         if (pasteOnNewLine) {
             // highlight and replace all the selected lines

@@ -9,7 +9,7 @@ const state = {
     perEditor: new WeakMap<vscode.TextEditor, boolean>(),
 };
 
-export function getMode(textEditor: vscode.TextEditor) {
+export const getMode = (textEditor: vscode.TextEditor) => {
     if (!configuration.perEditor) {
         return state.global;
     }
@@ -18,11 +18,11 @@ export function getMode(textEditor: vscode.TextEditor) {
         state.perEditor.set(textEditor, defaultMode);
     }
 
-    return <boolean> state.perEditor.get(textEditor);
+    return state.perEditor.get(textEditor) as boolean;
 }
 
-export function toggleMode(textEditor: vscode.TextEditor) {
-    let overtype = !getMode(textEditor);
+export const toggleMode = (textEditor: vscode.TextEditor) => {
+    const overtype = !getMode(textEditor);
 
     if (!configuration.perEditor) {
         state.global = overtype;
@@ -33,7 +33,7 @@ export function toggleMode(textEditor: vscode.TextEditor) {
     return overtype;
 }
 
-export function resetModes(mode: boolean | null, perEditor: boolean) {
+export const resetModes = (mode: boolean | null, perEditor: boolean) => {
     if (mode === null) { mode = defaultMode; }
 
     if (perEditor) {

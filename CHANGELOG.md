@@ -2,6 +2,11 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
+## 0.4.7
+- Downgraded to support vscode engine 1.55.0
+- Added ESlint inplace of TSlint
+- Changed depricatted "isWatching" to "isBackground"
+
 ## 0.4.0
 
 - Replaced configuration `overtype.abbreviatedStatus` by freely adjustable texts `overtype.labelInsertMode` and `overtype.labelOvertypeMode` [#9](https://github.com/DrMerfy/vscode-overtype/issues/9),

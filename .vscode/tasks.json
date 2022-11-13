@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "command": "npm",
     "args": ["run", "compile", "--loglevel", "silent"],
-    "isWatching": true,
+    "isBackground": true,
     "problemMatcher": "$tsc-watch",
     "tasks": [
         {

@@ -7,7 +7,7 @@ import { createStatusBarItem, destroyStatusBarItem, updateStatusBarItem } from "
 
 // initialization //////////////////////////////////////////////////////////////
 
-export function activate(context: vscode.ExtensionContext) {
+export const activate = (context: vscode.ExtensionContext) => {
     const statusBarItem = createStatusBarItem();
     activeTextEditorChanged();
 
@@ -25,13 +25,13 @@ export function activate(context: vscode.ExtensionContext) {
     );
 }
 
-export function deactivate() {
+export const deactivate = () => {
     destroyStatusBarItem();
 }
 
 // command handlers ////////////////////////////////////////////////////////////
 
-function activeTextEditorChanged(textEditor?: vscode.TextEditor) {
+const activeTextEditorChanged = (textEditor?: vscode.TextEditor) => {
     if (textEditor === undefined) {
         textEditor = vscode.window.activeTextEditor;
     }
@@ -49,7 +49,7 @@ function activeTextEditorChanged(textEditor?: vscode.TextEditor) {
     }
 }
 
-function toggleCommand() {
+const toggleCommand = () => {
     const textEditor = vscode.window.activeTextEditor;
     if (textEditor == null) {
         return;
@@ -59,15 +59,15 @@ function toggleCommand() {
     activeTextEditorChanged(textEditor);
 }
 
-function getShowInStatusBar(): boolean {
+const getShowInStatusBar = (): boolean => {
     if (configuration.labelInsertMode === ""
      && configuration.labelOvertypeMode === "") {
         return true;
-     }
-     return false;
+    }
+    return false;
 }
 
-function onDidChangeConfiguration() {
+const onDidChangeConfiguration = () => {
     const previousPerEditor = configuration.perEditor;
     const previousShowInStatusBar = getShowInStatusBar();
 
@@ -96,7 +96,7 @@ function onDidChangeConfiguration() {
     activeTextEditorChanged();
 }
 
-function shouldPerformOvertype() {
+const shouldPerformOvertype = () => {
     if (!vscode.window.activeTextEditor) { return false; }
 
     const editor = vscode.window.activeTextEditor;
@@ -105,7 +105,7 @@ function shouldPerformOvertype() {
     return mode;
 }
 
-function typeCommand(args: { text: string }) {
+const typeCommand = (args: { text: string }) => {
     if (shouldPerformOvertype()) {
         const editor = vscode.window.activeTextEditor;
         if (editor) {
@@ -116,7 +116,7 @@ function typeCommand(args: { text: string }) {
     return vscode.commands.executeCommand("default:type", args);
 }
 
-function pasteCommand(args: { text: string, pasteOnNewLine: boolean }) {
+const pasteCommand = (args: { text: string, pasteOnNewLine: boolean }) => {
     if (configuration.paste && shouldPerformOvertype()) {
         const editor = vscode.window.activeTextEditor;
         if (editor) {
