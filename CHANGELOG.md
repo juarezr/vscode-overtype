@@ -2,6 +2,9 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
+## 0.4.8
+- Added `overtype.isToggledOn` context property, which can be used with `when` in user-defined `keybindings.json`
+
 ## 0.4.7
 - Downgraded to support vscode engine 1.55.0
 - Added ESlint inplace of TSlint

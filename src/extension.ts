@@ -38,9 +38,11 @@ const activeTextEditorChanged = (textEditor?: vscode.TextEditor) => {
 
     if (textEditor == null) {
         updateStatusBarItem(null);
+        updateWhenContext(null);
     } else {
         const mode = getMode(textEditor);
         updateStatusBarItem(mode);
+        updateWhenContext(mode);
 
         // if in overtype mode, set the cursor to secondary style; otherwise, reset to default
         textEditor.options.cursorStyle = mode
@@ -48,6 +50,10 @@ const activeTextEditorChanged = (textEditor?: vscode.TextEditor) => {
             : configuration.defaultCursorStyle;
     }
 }
+
+const updateWhenContext = (overtype: boolean | null) => {
+    vscode.commands.executeCommand('setContext', 'overtype.isToggledOn', overtype);
+};
 
 const toggleCommand = () => {
     const textEditor = vscode.window.activeTextEditor;

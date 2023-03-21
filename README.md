@@ -100,6 +100,20 @@ e.g.
 
 > Sets the overtype cursor style.
 
+### Keybindings based on current overtype mode
+
+You can add additional keybindings conditionally based on the current overtype mode.
+
+e.g., to bind `Esc` *only* for *turning off* overtype, in `keybindings.json`,
+
+```json
+{
+  "key": "escape",
+  "command": "overtype.toggle",
+  "when": "editorTextFocus && overtype.isToggledOn"
+}
+```
+
 ## Contributing
 
 How can you contribute?
