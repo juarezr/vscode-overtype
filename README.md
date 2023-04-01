@@ -2,7 +2,7 @@
 _continuation fork of the project_  
 [![Extension releases](https://img.shields.io/github/release/DrMerfy/vscode-overtype/all.svg)](https://github.com/DrMerfy/vscode-overtype/releases)
 [![Open VSX Registry](https://img.shields.io/open-vsx/v/drmerfy/overtype)](https://open-vsx.org/extension/DrMerfy/overtype)
-[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/DrMerfy.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=DrMerfy.overtype)
+[![Visual Studio Marketplace](https://vsmarketplacebadges.dev/version-short/drmerfy.overtype.png)](https://marketplace.visualstudio.com/items?itemName=DrMerfy.overtype)
 [![GitHub issues](https://img.shields.io/github/issues/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/pulls)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
