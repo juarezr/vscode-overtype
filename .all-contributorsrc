@@ -42,6 +42,15 @@
         "projectManagement",
         "code"
       ]
+    },
+    {
+      "login": "corpulentcoffee",
+      "name": "Dave Shifflett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3958448?v=4",
+      "profile": "https://github.com/corpulentcoffee",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -49,5 +58,6 @@
   "projectOwner": "DrMerfy",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
