@@ -2,6 +2,10 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
+## 0.5.0
+- New refreshed icon
+- Changed activation event to "onStartupFinished"
+
 ## 0.4.8
 - Added `overtype.isToggledOn` context property, which can be used with `when` in user-defined `keybindings.json`
 
