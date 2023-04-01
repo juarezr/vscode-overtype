@@ -29,7 +29,7 @@
         "vscode": "^1.55.0"
     },
     "activationEvents": [
-        "*"
+        "onStartupFinished"
     ],
     "contributes": {
         "configuration": {
