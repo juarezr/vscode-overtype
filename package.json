@@ -86,21 +86,25 @@
     "scripts": {
         "lint": "eslint -c .eslintrc.js --ext .ts src",
         "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "npx @vscode/vsce package",
+        "install-extension": "code --install-extension *.vsix",
+        "cleanup": "rm -Rf out overtype-*.vsix",
         "create_package": "vsce package"
     },
     "devDependencies": {
-        "@types/vscode": "1.55.0",
+        "@types/vscode": "^1.55.0",
         "@typescript-eslint/eslint-plugin": "^5.42.1",
         "@typescript-eslint/parser": "^5.42.1",
         "eslint": "^8.27.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jsdoc": "^39.6.2",
+        "eslint-plugin-jsdoc": "^39.9.1",
         "eslint-plugin-prefer-arrow": "^1.2.3",
         "eslint-plugin-unicorn": "^44.0.2",
         "typescript": "4.5.4"
     },
     "dependencies": {
-        "vsce": "^2.14.0"
+    "@vscode/vsce": "^2.15.0"
     }
 }
