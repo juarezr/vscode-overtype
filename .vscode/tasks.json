@@ -1,7 +1,12 @@
 {
     "version": "2.0.0",
     "command": "npm",
-    "args": ["run", "compile", "--loglevel", "silent"],
+    "args": [
+        "run",
+        "compile",
+        "--loglevel",
+        "silent"
+    ],
     "isBackground": true,
     "problemMatcher": "$tsc-watch",
     "tasks": [
@@ -18,9 +23,77 @@
             "isBackground": true,
             "problemMatcher": "$tsc-watch",
             "group": {
-                "_id": "build",
+                "kind": "build",
                 "isDefault": false
             }
-        }
+        },
+        {
+            "label": "nodenv",
+            "type": "shell",
+            "command": "eval",
+            "args": [ "$(${userHome}/.nodenv/bin/nodenv init -)"],
+            "isBackground": false,
+            "problemMatcher": "$tsc-watch",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "icon": {
+                "id": "briefcase"
+            },
+        },
+        {
+            "label": "rebuild",
+            "type": "shell",
+            "command": "${userHome}/.nodenv/shims/npm",
+            "args": [
+                "rebuild"
+            ],
+            "isBackground": false,
+            "problemMatcher": "$tsc-watch",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "icon": {
+                "id": "jersey"
+            },
+        },
+        {
+            "label": "package",
+            "type": "shell",
+            "command": "${userHome}/.nodenv/shims/npx",
+            "args": [
+                "@vscode/vsce",
+                "package",
+            ],
+            "isBackground": false,
+            "problemMatcher": "$tsc-watch",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "icon": {
+                "id": "package"
+            },
+        },
+        {
+            "label": "install",
+            "type": "shell",
+            "command": "code",
+            "args": [
+                "--install-extension",
+                "package",
+            ],
+            "isBackground": false,
+            "problemMatcher": "$tsc-watch",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "icon": {
+                "id": "extensions"
+            },
+        },
     ]
 }
