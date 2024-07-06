@@ -43,22 +43,22 @@
                 },
                 "overtype.perEditor": {
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "Sets the insert/overtype mode per editor."
                 },
                 "overtype.secondaryCursorStyle": {
                     "type": "string",
-                    "default": "block",
+                    "default": "block-inline",
                     "description": "Sets the overtype cursor style."
                 },
                 "overtype.labelInsertMode": {
                     "type": "string",
-                    "default": "Insert",
+                    "default": "INS",
                     "description": "Label text in the status bar shown during Insert Mode, may be empty to hide the status."
                 },
                 "overtype.labelOvertypeMode": {
                     "type": "string",
-                    "default": "Overtype",
+                    "default": "OVR",
                     "description": "Label text in the status bar shown during Overtype Mode, may be empty."
                 }
             }
