@@ -85,20 +85,22 @@
         "package": "npx @vscode/vsce package",
         "vsix": "npx @vscode/vsce package",
         "install-extension": "code --install-extension *.vsix",
-        "cleanup": "rm -Rf out overtype-*.vsix"
+        "cleanup": "rm -Rf out *.vsix",
+        "sweep": "git clean -Xdf"
     },
     "devDependencies": {
-        "@types/vscode": "^1.55.0",
-        "@typescript-eslint/eslint-plugin": "^5.42.1",
-        "@typescript-eslint/parser": "^5.42.1",
-        "eslint": "^8.27.0",
-        "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jsdoc": "^39.9.1",
+        "@types/vscode": "^1.91.0",
+        "@typescript-eslint/eslint-plugin": "^7.14.1",
+        "@typescript-eslint/parser": "^7.14.1",
+        "eslint": "^8.56.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsdoc": "^48.5.2",
         "eslint-plugin-prefer-arrow": "^1.2.3",
-        "eslint-plugin-unicorn": "^44.0.2",
-        "typescript": "4.5.4"
+        "eslint-plugin-promise": "^6.4.0",
+        "eslint-plugin-unicorn": "^54.0.0",
+        "typescript": "5.5.3"
     },
     "dependencies": {
-    "@vscode/vsce": "^2.15.0"
+        "@vscode/vsce": "^2.29.0"
     }
 }
