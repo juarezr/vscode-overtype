@@ -73,13 +73,7 @@
             {
                 "command": "overtype.toggle",
                 "key": "insert",
-                "when": "editorFocus"
-            },
-            {
-                "command": "overtype.toggle",
-                "key": "ctrl+shift+i",
-                "mac": "cmd+shift+i",
-                "when": "editorFocus"
+                "when": "editorTextFocus && !editorReadonly && !inCompositeEditor"
             }
         ]
     },
